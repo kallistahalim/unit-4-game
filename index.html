@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Unit-4-Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="asset/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="asset/css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <h1>MATCH THE NUMBER</h1>
+    </div>
+
+    <div>
+        <h2 id="number-match">Number to Match: <span id="computer-number"></span></h2>
+    </div>
+
+    <div>
+        <h2 id="your-number">Your Number: <span id="user-number"></span></h2>
+    </div>
+
+    <div>
+        <img class="pictures" id="num1" src="assets/images/crystal.jpg" style='width:100px'>
+        <img class="pictures" id="num2" src="assets/images/crystal.jpg" style='width:100px'>
+        <img class="pictures" id="num3" src="assets/images/crystal.jpg" style='width:100px'>
+        <img class="pictures" id="num4" src="assets/images/crystal.jpg" style='width:100px'>
+
+
+        <script src="assets/javascript/game.js">
+           
+           $(document).ready(function () {
+
+                        var userNumber;
+                        var computerNumber = Math.floor(Math.random() * 101 + 19);
+                        var  num1 = Math.floor(Math.random() * 11 + 1);
+                        var  num2 = Math.floor(Math.random() * 11 + 1);
+                        var  num3 = Math.floor(Math.random() * 11 + 1);
+                        var  num4 = Math.floor(Math.random() * 11 + 1);
+
+
+                        function startNewGame() {
+                            userNumber = 0;
+                            computerNumber = Math.floor(Math.random() * 101 + 19);
+                            num1 = Math.floor(Math.random() * 11 + 1);
+                            num2 = Math.floor(Math.random() * 11 + 1);
+                            num3 = Math.floor(Math.random() * 11 + 1);
+                            num4 = Math.floor(Math.random() * 11 + 1);
+                        }
+
+                        startNewGame();
+
+
+                        $('#num1').on('click', function () {
+                            userNumber = userNumber + num1;
+                            if (userNumber = computerNumber) {
+                                alert = "you win"
+                            } else if (userNumber > computerNumber) {
+                                alert = "you lose"
+                            }
+                        })
+
+                        $('#num2').on('click', function () {
+                            userNumber = userNumber + num2;
+                            if (userNumber = computerNumber) {
+                                alert = "you win"
+                            } else if (userNumber > computerNumber) {
+                                alert = "you lose"
+                            }
+                        })
+
+                        $('#num3').on('click', function () {
+                            userNumber = userNumber + num3;
+                            if (userNumber = computerNumber) {
+                                alert = "you win"
+                            } else if (userNumber > computerNumber) {
+                                alert = "you lose"
+                            }
+                        })
+
+                        $('#num4').on('click', function () {
+                            userNumber = userNumber + num4;
+                            if (userNumber = computerNumber) {
+                                alert = "you win"
+                            } else if (userNumber > computerNumber) {
+                                alert = "you lose"
+                            }
+                        })
+
+                        startNewGame();
+                    })
+        </script>
+
+</body>
+
+</html>
