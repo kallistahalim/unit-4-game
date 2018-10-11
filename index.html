@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Unit-4-Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="asset/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="asset/css/style.css" />
-
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -26,89 +26,19 @@
         <h2 id="your-number">Your Number: <span id="user-number"></span></h2>
     </div>
 
-    <div>
-        <img class="pictures" id="num1" src="assets/images/crystal.jpg" style='width:100px'>
-        <img class="pictures" id="num2" src="assets/images/crystal.jpg" style='width:100px'>
-        <img class="pictures" id="num3" src="assets/images/crystal.jpg" style='width:100px'>
-        <img class="pictures" id="num4" src="assets/images/crystal.jpg" style='width:100px'>
+    <div class="pictures">
+        <img id="num1" src="assets/images/diamond.png">
+        <img id="num2" src="assets/images/diamond (1).png">
+        <img id="num3" src="assets/images/diamond (2).png">
+        <img id="num4" src="assets/images/diamond (3).png">
     </div>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var userNumber;
-            var computerNumber = Math.floor(Math.random() * 101 + 19);
-            var num1 = Math.floor(Math.random() * 11 + 1);
-            console.log(num1)
-            var num2 = Math.floor(Math.random() * 11 + 1);
-            var num3 = Math.floor(Math.random() * 11 + 1);
-            var num4 = Math.floor(Math.random() * 11 + 1);
+    <div id = "before-footer">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
-            function startNewGame() {
-                userNumber = 0;
-                computerNumber = Math.floor(Math.random() * 101 + 19);
-                console.log(computerNumber);
-
-                num1 = Math.floor(Math.random() * 11 + 1);
-                num2 = Math.floor(Math.random() * 11 + 1);
-                num3 = Math.floor(Math.random() * 11 + 1);
-                num4 = Math.floor(Math.random() * 11 + 1);
-                console.log(num1, num2, num3, num4);
-                $('#computer-number').text(computerNumber);
-                $('#user-number').text(userNumber);
-            }
-
-            startNewGame();
-
-            $('#num1').on('click', function () {
-                console.log(userNumber)
-                userNumber = userNumber + num1;
-                console.log(userNumber)
-                $('#user-number').text(userNumber);
-                if (userNumber === computerNumber) {
-                    alert ("you win");
-                    startNewGame();
-
-                } else if (userNumber > computerNumber) {
-                    alert ("you lose");
-                    startNewGame();
-                }
-            })
-            $('#num2').on('click', function () {
-                userNumber = userNumber + num2;
-                $('#user-number').text(userNumber);
-                if (userNumber === computerNumber) {
-                    alert ("you win");
-                    startNewGame();
-                } else if (userNumber > computerNumber) {
-                    alert ("you lose");
-                    startNewGame();
-                }
-            })
-            $('#num3').on('click', function () {
-                userNumber = userNumber + num3;
-                $('#user-number').text(userNumber);
-                if (userNumber === computerNumber) {
-                    alert  ("you win");
-                    startNewGame();
-                } else if (userNumber > computerNumber) {
-                    alert ("you lose");
-                    startNewGame();
-                }
-            })
-            $('#num4').on('click', function () {
-                userNumber = userNumber + num4;
-                $('#user-number').text(userNumber);
-                if (userNumber === computerNumber) {
-                    alert ("you win");
-                    startNewGame();
-                } else if (userNumber > computerNumber) {
-                    alert ("you lose");
-                    startNewGame();
-                }
-            })
-
-        })
-    </script>
+    <div id="footer">
+        <p>Copyright &copy;2018 Kallista Halim</p>
+    </div>
+    <script src="assets/javascript/game.js"></script>
 
 </body>
 
