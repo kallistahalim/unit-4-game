@@ -67,16 +67,18 @@ h2 {
    
 }
 
-p{
+#instruction{
     font-family: 'Krub', sans-serif;
     font-size: 14px;
     text-align: center;
     margin: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    display: inline-block;
+    float: left;
+    margin-left:400px;
+    margin-right: 0;
+    width: 40%;
     color:#810c0c;
+
 
 }
 
@@ -86,4 +88,20 @@ p{
     background-attachment: fixed;
     background-position: right; 
 
+}
+
+#wintext, #losstext{
+    font-family: 'Krub', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    float: left;
+    color:#810c0c;
+}
+
+
+
+#losstext{
+    padding-left: 100px;
 }
