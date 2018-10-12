@@ -1,13 +1,14 @@
 
-        $(document).ready(function () {
+       
+       
+       $(document).ready(function () {
             var userNumber;
             var computerNumber = Math.floor(Math.random() * 101 + 19);
             var num1 = Math.floor(Math.random() * 11 + 1);
-            console.log(num1)
             var num2 = Math.floor(Math.random() * 11 + 1);
             var num3 = Math.floor(Math.random() * 11 + 1);
             var num4 = Math.floor(Math.random() * 11 + 1);
-
+            
             function startNewGame() {
                 userNumber = 0;
                 computerNumber = Math.floor(Math.random() * 101 + 19);
@@ -25,9 +26,8 @@
             startNewGame();
 
             $('#num1').on('click', function () {
-                console.log(userNumber)
                 userNumber = userNumber + num1;
-                console.log(userNumber)
+                
                 $('#user-number').text(userNumber);
                 if (userNumber === computerNumber) {
                     alert ("you win");
