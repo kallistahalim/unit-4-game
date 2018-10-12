@@ -25,64 +25,88 @@
 
             startNewGame();
 
+            var audioElement1 = document.createElement("audio");
+            var audioElement2 = document.createElement("audio");
+            var audioElement3 = document.createElement("audio");
+            var audioElement4 = document.createElement("audio");
+            var audioElement5 = document.createElement("audio");
+            var audioElement6 = document.createElement("audio");
+                audioElement1.setAttribute("src", "assets/sounds/beer.mp3");
+                audioElement2.setAttribute("src", "assets/sounds/pop.mp3");
+                audioElement3.setAttribute("src", "assets/sounds/slurp.mp3");
+                audioElement4.setAttribute("src", "assets/sounds/cubes.mp3");
+                audioElement5.setAttribute("src", "assets/sounds/win.mp3");
+                audioElement6.setAttribute("src", "assets/sounds/lose.mp3");
             $('#num1').on('click', function () {
                 userNumber = userNumber + num1;
+                audioElement1.play();
                 $('#user-number').text(userNumber);
-                if (userNumber === computerNumber) {
+                  if (userNumber === computerNumber) {
                     alert ("you win");
                     wins++;
                     $("#wins").text(wins);
+                    audioElement5.play();
                     startNewGame();
 
                 } else if (userNumber > computerNumber) {
                     alert ("you lose");
                     losses++;
                     $("#losses").text(losses);
+                    audioElement6.play();
                     startNewGame();
                 }
             })
             $('#num2').on('click', function () {
                 userNumber = userNumber + num2;
                 $('#user-number').text(userNumber);
+                audioElement2.play();
                 if (userNumber === computerNumber) {
                     alert ("you win");
                     wins++;
                     $("#wins").text(wins);
+                    audioElement5.play();
                     startNewGame();
                 } else if (userNumber > computerNumber) {
                     alert ("you lose");
                     losses++;
                     $("#losses").text(losses);
+                    audioElement6.play();
                     startNewGame();
                 }
             })
             $('#num3').on('click', function () {
                 userNumber = userNumber + num3;
                 $('#user-number').text(userNumber);
+                audioElement3.play();
                 if (userNumber === computerNumber) {
                     alert ("you win");
                     wins++;
                     $("#wins").text(wins);
+                    audioElement5.play();
                     startNewGame();
                 } else if (userNumber > computerNumber) {
                     alert ("you lose");
                     losses++;
                     $("#losses").text(losses);
+                    audioElement6.play();
                     startNewGame();
                 }
             })
             $('#num4').on('click', function () {
                 userNumber = userNumber + num4;
                 $('#user-number').text(userNumber);
+                audioElement4.play();
                 if (userNumber === computerNumber) {
                     alert ("you win");
                     wins++;
                     $("#wins").text(wins);
+                    audioElement5.play();
                     startNewGame();
                 } else if (userNumber > computerNumber) {
                     alert ("you lose");
                     losses++;
                     $("#losses").text(losses);
+                    audioElement6.play();
                     startNewGame();
                 }
             })
